@@ -1,0 +1,59 @@
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+public class B {
+
+	//by default eclipse provide Junit and we need to import library
+	@Test   
+	public void test1() {
+		System.out.println("from test1");
+	}
+		
+	//Annotation basically instructs the compiler to run this test weather it pass or fail
+		@Test
+		public void test2() {
+			System.out.println("from test2");
+
+	}
+//		@Test
+//		public void test3() {
+//			int x=10/0;
+//			System.out.println(x);
+
+//	}
+		// It runs before every test
+		@Before
+		public void beforeTest()
+		{
+			System.out.println("From beforeTest");
+		}
+		
+		// It runs after every test
+		@After
+		public void afterTest()
+		{
+			System.out.println("afterTest");
+		}
+		
+		//It run before all the method once and should have static method
+	@BeforeClass
+		public static void beforeClass()
+		{
+			System.out.println("Before Class");
+		}
+	
+	@AfterClass
+	public static void afterClass()
+	{
+		System.out.println("After Class");
+	}
+   
+	@Test
+	public static void aClass()
+	{
+		
+	}
+}
